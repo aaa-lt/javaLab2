@@ -11,9 +11,12 @@ public class Task1 {
 
     public Task1(int r) {
         radius = r;
+        xCord = 0;
+        yCord = 0;
     }
 
     public Task1(int x, int y) {
+        radius = 1;
         xCord = x;
         yCord = y;
     }
@@ -29,16 +32,16 @@ public class Task1 {
     }
 
     public void setCenter(int x, int y) {
-        xCord = x;
-        yCord = y;
+        xCord = xCord + x;
+        yCord = yCord + y;
     }
 
     public void setRadius(int r) {
         radius = r;
     }
 
-    public int getCircleSquare() {
-        return radius * radius;
+    public double getCircleSquare() {
+        return Math.floor(Math.PI * radius * radius * 10) / 10;
     }
 
     public double getCircleLength() {

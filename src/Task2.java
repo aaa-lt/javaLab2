@@ -6,29 +6,30 @@ public class Task2 {
         this.count = 0;
         this.price = 0;
     }
-    public Task2(int c, int p){
-        this.count = c;
-        this.price = p;
+    public Task2(int count, int price){
+        this.count = count;
+        this.price = price;
     }
 
-    public void changeCount(int c){
-        this.count = c;
+    public void changeCount(int count){
+        this.count = count;
     }
 
-    public void changePrice(int p){
-        this.price = p;
+    public void changePrice(int price){
+        this.price = price;
     }
 
     public int getFullPrice(){
         return this.price * this.count;
     }
 
-    public boolean isPriceGreater(Task2 a){
-        return this.price * this.count > a.price * a.count;
+    public boolean isPriceGreater(Task2 toCompare){
+        return this.price * this.count > toCompare.price * toCompare.count;
     }
 
     public int getAllCounts(Task2... arr){
         int sum = 0;
+        
         for(Task2 item : arr){
             sum += item.count;
         }
